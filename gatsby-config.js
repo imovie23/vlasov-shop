@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `VlasovShop`,
-        short_name: `Vlasov`,
+        name: `vlasovShop`,
+        short_name: `vlasov`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
