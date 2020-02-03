@@ -25,7 +25,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `vlasov-shop-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/vlasov-icon.png`, // This path is relative to the root of the site.
         crossOrigin: `use-credentials`,
       },
     },
