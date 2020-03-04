@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Vlasov-shop`,
+    title: `Vlasov jewelry`,
     description: `Vlasov jewelry online store`,
     author: `@starodubetsm`,
   },
@@ -16,6 +16,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,7 +25,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
-        display: `vlasov-shop-ui`,
+        display: `minimal-ui`,
         icon: `src/images/vlasov-icon.png`, // This path is relative to the root of the site.
         crossOrigin: `use-credentials`,
       },

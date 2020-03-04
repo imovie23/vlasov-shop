@@ -1,41 +1,73 @@
-import { Link } from "gatsby"
 import React from "react"
+import { graphql, useStaticQuery, Link } from "gatsby"
+import Img from "gatsby-image"
+import { Breakpoint } from "react-socks"
+import Logo from "../common/Logo"
+import ContactHeader from "../ContactHeader"
+import MenuMobile from "../common/MenuMobile"
+import "./style.scss"
 
-type HeaderProps = {
-  siteTitle: string
+interface Data {
+  file: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    childImageSharp: any
+  }
 }
 
-const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header: React.FC = () => {
+  const data = useStaticQuery<Data>(graphql`
+    query {
+      file(relativePath: { eq: "header/office.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 25, maxHeight: 24) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  `)
 
-Header.defaultProps = {
-  siteTitle: ``,
+  return (
+    <header className="header">
+      <Breakpoint small down>
+        <div className="header__wrapper">
+          <MenuMobile />
+          <Logo />
+          <div className="header__office">
+            <Link to={`/`} className="header__office-link">
+              <Img className="header__office-logo" fluid={data.file.childImageSharp.fluid} alt="logoOffice" />
+            </Link>
+          </div>
+        </div>
+      </Breakpoint>
+
+      <Breakpoint medium only>
+        <div className="header__wrapper">
+          <ContactHeader />
+          <Logo />
+          <div className="header__office">
+            <Link to={`/`} className="header__office-link">
+              <span className="header__office-text">Войти в кабинет</span>
+              <Img className="header__office-logo" fluid={data.file.childImageSharp.fluid} alt="logoOffice" />
+            </Link>
+          </div>
+        </div>
+      </Breakpoint>
+
+      <Breakpoint large up>
+        <div className="header__wrapper">
+          <ContactHeader />
+          <Logo />
+          <div className="header__office">
+            <Link to={`/`} className="header__office-link">
+              <span className="header__office-text">Войти в кабинет</span>
+              <Img className="header__office-logo" fluid={data.file.childImageSharp.fluid} alt="logoOffice" />
+            </Link>
+          </div>
+        </div>
+      </Breakpoint>
+    </header>
+  )
 }
 
 export default Header

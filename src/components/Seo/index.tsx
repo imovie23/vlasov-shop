@@ -8,7 +8,6 @@
 import React, { useState, useEffect } from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import { Data } from "../../interface"
 
 type MetaData = {
   [key: string]: string | number
@@ -19,6 +18,16 @@ interface SeoProps {
   description?: string
   lang?: string
   meta?: MetaData[]
+}
+
+interface Data {
+  site: {
+    siteMetadata: {
+      title: string
+      description?: string
+      author?: string
+    }
+  }
 }
 
 const SEO: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
@@ -96,7 +105,7 @@ const SEO: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `ru`,
   meta: [],
   description: ``,
 }

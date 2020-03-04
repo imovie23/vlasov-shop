@@ -1,0 +1,45 @@
+@import "../../style/fontFace.css";
+@import "../../style/constants.scss";
+
+.header {
+
+  &__contact {
+    display: flex;
+    align-items: center;
+
+    &-number {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+    }
+
+    &-operator {
+      margin: 0 0 -9px 0;
+      font-family: $Lato;
+      font-size: 18px;
+      color: $subColor;
+    }
+
+    &-phone {
+      margin: 10px 0 0 8px;
+      font-family: Lato-Medium, sans-serif;
+      font-size: 24px;
+      color: $subColor;
+    }
+  }
+
+}
+
+.breakpoint__medium-only {
+  .header {
+    &__contact {
+      &-operator {
+        font-size: 15px;
+      }
+
+      &-phone {
+        font-size: 20px;
+      }
+    }
+  }
+}

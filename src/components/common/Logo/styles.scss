@@ -1,0 +1,82 @@
+@import "../../../style/fontFace.css";
+@import "../../../style/constants.scss";
+
+.logo {
+  width: fit-content;
+  max-width: 300px;
+
+  &__link {
+    display: flex;
+    text-decoration: none;
+  }
+
+  &__image {
+    width: 30px;
+    height: 35px;
+  }
+
+  &__text-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin: 0 0 -5px 13px;
+  }
+
+  &__main-text {
+    font-family: Lato-Regular, sans-serif;
+    font-size: 15px;
+    color: $defaultColor;
+    letter-spacing: 2.2px;
+  }
+
+  &__secondary-text {
+    font-family: Lato-Regular, sans-serif;
+    font-size: 10px;
+    color: $subColor;
+    letter-spacing: 2px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+
+  .logo {
+    &__image {
+      width: 40px;
+      height: 45px;
+    }
+
+    &__main-text {
+      font-size: 20px;
+      letter-spacing: 2.4px;
+    }
+
+    &__secondary-text {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+    }
+  }
+}
+
+.breakpoint__medium-only, .breakpoint__large-up {
+  .logo {
+    &__image {
+      width: 60px;
+      height: 65px;
+    }
+
+    &__main-text {
+      font-size: 28px;
+      letter-spacing: 2.8px;
+    }
+
+    &__secondary-text {
+      font-size: 14px;
+      letter-spacing: 2.64px;
+    }
+  }
+}
+
+

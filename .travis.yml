@@ -15,7 +15,12 @@ matrix:
 branches:
   only:
     - master
-    - /^release-.*/
+
+before_script:
+  - npm install --prefix ./
+
+script:
+  - npm run test
 
 install:
   - npm uninstall typescript --no-save

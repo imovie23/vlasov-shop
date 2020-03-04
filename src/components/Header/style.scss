@@ -1,0 +1,43 @@
+@import "../../style/fontFace.css";
+@import "../../style/constants.scss";
+
+.header {
+  background: #fff;
+  margin-bottom: 1.45rem;
+  padding: 10px 5%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__office {
+
+    &-link {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    &-text {
+      font-family: $Lato;
+      font-size: 17px;
+      color: $subColor;
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: $subColor;
+      }
+    }
+
+    &-logo {
+      width: 25px;
+      height: 24px;
+      margin: -6px 0 0 8px;
+    }
+  }
+}
