@@ -1,0 +1,84 @@
+@import "../../style/fontFace.css";
+@import "../../style/constants.scss";
+@import "../../constants/displayConstants";
+@import "../../constants/mediaMixin";
+
+
+.intro {
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 56px;
+    max-width: 90%;
+  }
+
+  &__heading-text {
+    font-family: $Lato;
+    color: $defaultColor;
+    font-size: 18px;
+    margin: 0 0 22px 14px;
+
+  }
+  &__chief-text{
+    font-family: $Lato;
+    color: $subColor;
+    font-size: 18px;
+    line-height: 1.24;
+    margin: 0 0 20px 14px;
+  }
+
+
+  &__btn{
+    background-image: linear-gradient(0.25turn, $primary, $white);
+    outline: none;
+    font-family: $Lato-Medium;
+    color: $subColor;
+    font-size: 18px;
+    margin: 0 0 22px 14px;
+    border-color: $defaultLineColor;
+
+  }
+
+}
+
+@include display($SMALL_TABLE) {
+
+  .intro {
+    &__wrapper {
+      max-width: 78%;
+    }
+  }
+}
+
+@include display($TABLE) {
+  .intro {
+    &__content {
+      display: flex;
+      justify-content: flex-end;
+      height: 500px;
+    }
+    &__wrapper {
+      max-width: 50%;
+      margin-right: 5%;
+    }
+  }
+}
+
+@include display($DESKTOP) {
+  .intro {
+    &__wrapper {
+      max-width: 40%;
+      margin-right: 10%;
+    }
+  }
+}
+
+@include display($LARGE_DESKTOP) {
+  .intro {
+    &__wrapper {
+    }
+  }
+}

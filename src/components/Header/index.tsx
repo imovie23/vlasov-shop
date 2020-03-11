@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-import { Breakpoint } from "react-socks"
 import Logo from "../common/Logo"
-import ContactHeader from "../ContactHeader"
 import MenuMobile from "../common/MenuMobile"
+import { Context } from "../../constants/context"
+import ContactHeader from "../ContactHeader"
+import Search from "../common/Search"
+import Shop from "../common/Shop"
+import * as DISPLAY from "../../constants/windowDisplay"
 import "./style.scss"
 
 interface Data {
@@ -27,45 +30,40 @@ const Header: React.FC = () => {
     }
   `)
 
+  const { display } = useContext(Context)
+
   return (
     <header className="header">
-      <Breakpoint small down>
-        <div className="header__wrapper">
-          <MenuMobile />
-          <Logo />
-          <div className="header__office">
-            <Link to={`/`} className="header__office-link">
-              <Img className="header__office-logo" fluid={data.file.childImageSharp.fluid} alt="logoOffice" />
-            </Link>
-          </div>
-        </div>
-      </Breakpoint>
+      <div className="header__wrapper">
+        {(display === DISPLAY.MOBILE || display === DISPLAY.SMALL_TABLE) && <MenuMobile />}
+        {display !== DISPLAY.MOBILE && display !== DISPLAY.SMALL_TABLE && <ContactHeader />}
+        <Logo />
 
-      <Breakpoint medium only>
-        <div className="header__wrapper">
-          <ContactHeader />
-          <Logo />
+        {display !== DISPLAY.MOBILE && display !== DISPLAY.SMALL_TABLE && display !== DISPLAY.TABLE && (
           <div className="header__office">
             <Link to={`/`} className="header__office-link">
               <span className="header__office-text">Войти в кабинет</span>
               <Img className="header__office-logo" fluid={data.file.childImageSharp.fluid} alt="logoOffice" />
             </Link>
           </div>
-        </div>
-      </Breakpoint>
+        )}
 
-      <Breakpoint large up>
-        <div className="header__wrapper">
-          <ContactHeader />
-          <Logo />
-          <div className="header__office">
-            <Link to={`/`} className="header__office-link">
-              <span className="header__office-text">Войти в кабинет</span>
-              <Img className="header__office-logo" fluid={data.file.childImageSharp.fluid} alt="logoOffice" />
-            </Link>
+        {(display === DISPLAY.MOBILE || display === DISPLAY.SMALL_TABLE || display === DISPLAY.TABLE) && (
+          <div className="header__actions">
+            <span className="header__actions--indent">
+              <Search />
+            </span>
+            {display === DISPLAY.TABLE && (
+              <span className="header__actions--indent">
+                <Link to={`/`} className="header__office-link">
+                  <Img className="header__office-logo" fluid={data.file.childImageSharp.fluid} alt="logoOffice" />
+                </Link>
+              </span>
+            )}
+            <Shop />
           </div>
-        </div>
-      </Breakpoint>
+        )}
+      </div>
     </header>
   )
 }

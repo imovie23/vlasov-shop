@@ -1,5 +1,7 @@
 @import "../../../style/fontFace.css";
 @import "../../../style/constants.scss";
+@import "../../../constants/displayConstants";
+@import "../../../constants/mediaMixin";
 
 .logo {
   width: fit-content;
@@ -27,40 +29,74 @@
 
   &__main-text {
     font-family: Lato-Regular, sans-serif;
-    font-size: 15px;
+    font-size: 24px;
     color: $defaultColor;
     letter-spacing: 2.2px;
   }
 
   &__secondary-text {
     font-family: Lato-Regular, sans-serif;
-    font-size: 10px;
+    font-size: 14px;
     color: $subColor;
     letter-spacing: 2px;
   }
 }
 
-@media only screen and (min-width: 480px) {
+@include display($SMALL_TABLE) {
 
   .logo {
-    &__image {
-      width: 40px;
-      height: 45px;
-    }
 
     &__main-text {
-      font-size: 20px;
+      font-size: 28px;
       letter-spacing: 2.4px;
     }
 
     &__secondary-text {
-      font-size: 12px;
+      font-size: 15px;
       letter-spacing: 2.5px;
     }
   }
 }
 
-.breakpoint__medium-only, .breakpoint__large-up {
+@include display($TABLE) {
+  .logo {
+    &__image {
+      width: 60px;
+      height: 65px;
+    }
+
+    &__main-text {
+      font-size: 28px;
+      letter-spacing: 2.8px;
+    }
+
+    &__secondary-text {
+      font-size: 15px;
+      letter-spacing: 2.64px;
+    }
+  }
+}
+
+@include display($DESKTOP) {
+  .logo {
+    &__image {
+      width: 60px;
+      height: 65px;
+    }
+
+    &__main-text {
+      font-size: 28px;
+      letter-spacing: 2.8px;
+    }
+
+    &__secondary-text {
+      font-size: 15px;
+      letter-spacing: 2.64px;
+    }
+  }
+}
+
+@include display($LARGE_DESKTOP) {
   .logo {
     &__image {
       width: 60px;

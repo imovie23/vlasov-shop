@@ -1,10 +1,11 @@
 @import "../../style/fontFace.css";
 @import "../../style/constants.scss";
+@import "../../constants/displayConstants";
+@import "../../constants/mediaMixin";
 
 .header {
-  background: #fff;
-  margin-bottom: 1.45rem;
-  padding: 10px 5%;
+  background: linear-gradient(0.25turn, $primary, $secondary);
+  padding: 10px 16px;
 
   &__wrapper {
     display: flex;
@@ -27,6 +28,7 @@
       font-family: $Lato;
       font-size: 17px;
       color: $subColor;
+      margin-right: 10px;
 
       &:hover {
         text-decoration: underline;
@@ -39,5 +41,49 @@
       height: 24px;
       margin: -6px 0 0 8px;
     }
+  }
+
+  &__actions {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &--indent {
+      margin-right: 15px;
+    }
+  }
+}
+
+@include display($SMALL_TABLE) {
+
+  .header {
+    background: linear-gradient(0.25turn, $primary, $secondary);
+  }
+}
+
+@include display($TABLE) {
+  .header {
+    background: $white;
+
+    &__office {
+      &-logo {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@include display($DESKTOP) {
+  .header {
+    background: $white
+  }
+}
+
+@include display($LARGE_DESKTOP) {
+  .header {
+    background: $white
   }
 }

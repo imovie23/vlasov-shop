@@ -5,13 +5,19 @@
   "version": "0.1.0",
   "author": "Starodubets Misha <starodubetsm@gmail.com>",
   "dependencies": {
+    "@types/react-slick": "^0.23.4",
+    "@types/styled-components": "^5.0.1",
+    "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.7",
+    "gatsby-background-image": "^0.10.2",
+    "gatsby-background-image-es5": "^0.10.2",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-plugin-styled-components": "^3.1.20",
     "gatsby-plugin-tslint": "0.0.2",
     "gatsby-plugin-typescript": "^2.1.26",
     "gatsby-source-filesystem": "^2.1.46",
@@ -21,7 +27,10 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "react-socks": "^2.1.0"
+    "react-slick": "^0.25.2",
+    "react-socks": "^2.1.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
     "@types/node": "^13.5.1",

@@ -1,0 +1,55 @@
+@import "../../../style/fontFace.css";
+@import "../../../style/constants.scss";
+@import "../../../constants/displayConstants";
+@import "../../../constants/mediaMixin";
+
+.carousel {
+  &__slide {
+    &-image {
+
+    }
+
+    &-content {
+      background-color: $secondary;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-primary {
+      font-family: $Lato-Medium;
+      font-size: 16px;
+      color: $subColor;
+    }
+
+    &-secondary {
+      font-family: $Lato;
+      font-size: 14px;
+      color: $subColor;
+    }
+
+  }
+}
+
+@include display($SMALL_TABLE) {
+
+  .carousel {
+    &__slide {
+
+      margin-right: 10px;
+    }
+  }
+}
+
+@include display($TABLE) {
+
+}
+
+@include display($DESKTOP) {
+
+}
+
+@include display($LARGE_DESKTOP) {
+
+}

@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import { getLogoText, LogoText } from "../../../lib/getLogoText"
 import "./styles.scss"
+import { Context } from "../../../constants/context"
+import * as DISPLAY from "../../../constants/windowDisplay"
 
 interface Data {
   site: {
@@ -37,12 +39,14 @@ const Logo: React.FC = () => {
   `)
 
   const { mainText, secondaryText }: LogoText = getLogoText(data?.site ? data.site.siteMetadata.title : `Logo text`)
-  console.log(data.file)
+  const { display } = useContext(Context)
 
   return (
     <div className="logo">
       <Link to={`/`} className="logo__link">
-        <Img className="logo__image" fluid={data.file.childImageSharp.fluid} alt="logoVlasov" />
+        {display !== DISPLAY.MOBILE && display !== DISPLAY.SMALL_TABLE && (
+          <Img className="logo__image" fluid={data.file.childImageSharp.fluid} alt="logoVlasov" />
+        )}
         <div className="logo__text-container">
           <span className="logo__main-text">{secondaryText ? mainText.toUpperCase() : mainText}</span>
           {secondaryText && <span className="logo__secondary-text">{secondaryText}</span>}

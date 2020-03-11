@@ -336,7 +336,6 @@ hgroup {
 
 ul {
     padding: 0;
-    margin: 0 0 1.45rem 1.45rem;
     list-style-position: outside;
     list-style-image: none;
 }
@@ -442,9 +441,6 @@ th {
     font-weight: bold;
 }
 
-li {
-    margin-bottom: calc(1.45rem / 2);
-}
 
 ol li {
     padding-left: 0;
