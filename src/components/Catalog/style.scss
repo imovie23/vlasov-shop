@@ -1,0 +1,47 @@
+@import "../../style/fontFace.css";
+@import "../../style/constants.scss";
+@import "../../constants/displayConstants";
+@import "../../constants/mediaMixin";
+
+.catalog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+  margin-bottom: 29px;
+  &__showMore{
+    font-family: $Lato;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #8d888e;
+  }
+}
+
+@include display($TABLE) {
+  .catalog {
+    position: relative;
+    &__showMore{
+      position: absolute;
+      bottom: 0;
+      font-weight: 600;
+    }
+  }
+}
+
+@include display($DESKTOP) {
+  .header {
+    background: $white
+  }
+}
+
+@include display($LARGE_DESKTOP) {
+  .header {
+    background: $white
+  }
+}

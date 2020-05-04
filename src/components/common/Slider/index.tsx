@@ -2,6 +2,8 @@ import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import CustomNextArrow from "./Arrow/LeftArrow"
+import CustomPrevArrow from "./Arrow/RightArrow"
 
 type SliderProp = {
   children: React.ReactNode
@@ -15,6 +17,10 @@ const CustomSlider: React.FC<SliderProp> = ({ children }) => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
+    //@ts-ignore
+    nextArrow: <CustomNextArrow />,
+    //@ts-ignore
+    prevArrow: <CustomPrevArrow />,
     responsive: [
       {
         breakpoint: 1024,

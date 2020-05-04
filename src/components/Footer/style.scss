@@ -1,0 +1,100 @@
+@import "../../style/fontFace.css";
+@import "../../style/constants.scss";
+@import "../../constants/displayConstants";
+@import "../../constants/mediaMixin";
+
+.footer {
+  &__information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__padding{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &__work{
+    font-family: $Lato;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8d888e;
+  }
+  &__day{
+    font-family: $Lato;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #686369 ;
+  }
+  &__weekend{
+    font-family: $Lato;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fbc5c4;
+  }
+
+  &__action{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    &-socialMedia {
+      width: 190px;
+      height: 55px;
+      box-shadow: 0 0 3.6px 0.4px #efefef;
+      background-image: linear-gradient(to top, #fbc5c4, #fbdbce);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      &-instagram{
+        width: 35px;
+        height: 35px;
+      }
+      &-faceBook{
+        width: 19px;
+        height: 37px;
+      }
+      &-twitter{
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
+  &__media{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__action-socialMedia-720{
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__action-720{
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+  }
+}
+
+.margin{
+  margin-right: 20px;
+}

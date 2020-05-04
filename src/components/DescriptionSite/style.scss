@@ -1,0 +1,104 @@
+@import "../../style/fontFace.css";
+@import "../../style/constants.scss";
+@import "../../constants/displayConstants";
+@import "../../constants/mediaMixin";
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+  margin-bottom: 30px;
+   &__image{
+     width: 95%;
+     height: 300px;
+   }
+  &__button{
+    font-family: $Lato;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #8d888e;
+  }
+  &__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    &-title{
+      font-family: $Lato;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #8d888e;
+      font-size: 22px;
+      line-height: 1.27;
+      margin-bottom: 30px;
+    }
+    &-secondaryTitle{
+      overflow: hidden;
+      height: 200px;
+      font-family: $Lato;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #8d888e;
+      line-height: 1.38;
+      font-size: 16px;
+    }
+    &-secondaryTitleVisible{
+      overflow: hidden;
+      height: auto;
+      font-family: $Lato;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #8d888e;
+      line-height: 1.38;
+      font-size: 16px;
+    }
+  }
+}
+
+.description--720{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #fff;
+  position: relative;
+  &__text--720{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    max-width: 320px;
+  }
+  &__image--720{
+    width: 405px;
+    height: 405px;
+    position: absolute;
+    right: -20px;
+  }
+  &__background--720{
+    height: 630px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}

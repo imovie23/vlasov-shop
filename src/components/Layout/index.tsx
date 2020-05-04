@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { BreakpointProvider } from "react-socks"
 import Header from "../header"
+import Footer from "../Footer"
 import Menu from "../Menu"
 import "./layout.css"
 import { Context } from "../../constants/context"
@@ -23,9 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Header />
         {display !== DISPLAY.MOBILE && display !== DISPLAY.SMALL_TABLE && <Menu />}
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     </BreakpointProvider>
   )

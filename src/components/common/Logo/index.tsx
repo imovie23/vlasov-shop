@@ -20,7 +20,7 @@ interface Data {
   }
 }
 
-const Logo: React.FC = () => {
+const Logo: React.FC = ({logo}) => {
   const data = useStaticQuery<Data>(graphql`
     query {
       file(relativePath: { eq: "header/logo.png" }) {

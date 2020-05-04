@@ -1,0 +1,10 @@
+@import "../../../style/fontFace.css";
+@import "../../../style/constants.scss";
+@import "../../../constants/displayConstants";
+@import "../../../constants/mediaMixin";
+
+.divide-line{
+  height: 15px;
+  background-color: $defaultLineColor;
+  margin-bottom: 30px;
+}

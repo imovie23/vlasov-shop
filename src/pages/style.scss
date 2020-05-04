@@ -1,0 +1,13 @@
+@import "../style/fontFace.css";
+@import "../style/constants.scss";
+@import "../constants/displayConstants";
+@import "../constants/mediaMixin";
+
+
+.divide {
+  &__line{
+    background-color: #fbdbce;
+    height: 25px;
+    margin-top: -23px;
+  }
+}

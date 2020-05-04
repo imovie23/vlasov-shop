@@ -1,0 +1,117 @@
+@import "../../../style/fontFace.css";
+@import "../../../style/constants.scss";
+@import "../../../constants/displayConstants";
+@import "../../../constants/mediaMixin";
+
+.catalog {
+  &__card{
+    width: 90%;
+    height: 310px;
+    margin-bottom: 26px;
+    display: flex;
+
+    &-title{
+      font-family: $Lato;
+      font-size: 20px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.16;
+      letter-spacing: normal;
+      text-align: left;
+      color: #8d888e;
+      margin-left: 20px;
+      margin-top: 15px;
+    }
+
+    &-bottomBar{
+      position: absolute;
+      bottom: 0;
+      left: -3%;
+      width: 105%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #eeeeee;
+      height: 49px;
+    }
+    &-discount{
+      font-family: $Lato;
+      font-size: 20px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.6;
+      letter-spacing: normal;
+      text-align: left;
+      color: #fbc5c4;
+    }
+    &-price{
+      font-family: $Lato;
+      font-size: 20px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: left;
+      line-height: 1.16;
+      color: #8d888e;
+    }
+    &-oldPrice{
+      font-family: $Lato;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.6;
+      letter-spacing: normal;
+      text-align: left;
+      color: #8d888e;
+      font-size: 13.5px;
+      font-weight: 300;
+      text-decoration: line-through;
+    }
+    &-icon{
+      width: 82px;
+      height: 49px;
+      background-color: #fbc5c4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: -5%;
+    }
+    &-image{
+      width: 29px;
+      height: 31px;
+    }
+  }
+
+}
+
+
+@include display($TABLE) {
+  .catalog {
+    &__card{
+      max-width: 312px;
+      margin-right: 20px;
+      &-bottomBar{
+        position: absolute;
+        max-width: 296px;
+        left: 7px;
+      }
+      &-icon{
+        margin-right: -8px;
+      }
+    }
+  }
+}
+
+@include display($DESKTOP) {
+  .header {
+    background: $white
+  }
+}
+
+@include display($LARGE_DESKTOP) {
+  .header {
+    background: $white
+  }
+}

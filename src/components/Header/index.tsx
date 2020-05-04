@@ -60,7 +60,7 @@ const Header: React.FC = () => {
                 </Link>
               </span>
             )}
-            <Shop />
+            <Shop />o
           </div>
         )}
       </div>

@@ -1,3 +1,113 @@
-.carousel{
+@import "../../style/fontFace.css";
+@import "../../style/constants.scss";
+@import "../../constants/displayConstants";
+@import "../../constants/mediaMixin";
 
+.slick-prev:before, .slick-next:before  {
+  content: '' !important;
+}
+.slick-prev {
+  left: -50px;
+}
+
+.slick-next{
+  right: -50px;
+}
+
+.slick-dots{
+  display: none !important;
+}
+
+.slider{
+  &__arrow{
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.carousel{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+  &__content{
+    width: 60%;
+  }
+  &__divider{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+  }
+}
+
+@include display($SMALL_TABLE) {
+  .carousel{
+    &__content{
+      width: 60%;
+    }
+  }
+}
+
+@include display($TABLE) {
+  .carousel{
+    height: 200px;
+
+    &__content{
+      width: 80%;
+      position: absolute;
+
+    }
+    &__divider{
+      position: absolute;
+      width: 100%;
+
+    }
+  }
+  .carousel__divider.style{
+    height: 130px;
+    top: 40px
+  }
+}
+
+@include display($DESKTOP) {
+  .carousel{
+    height: 200px;
+
+    &__content{
+      width: 80%;
+      position: absolute;
+
+    }
+    &__divider{
+      position: absolute;
+      width: 100%;
+
+    }
+  }
+  .carousel__divider.style{
+    height: 130px;
+    top: 40px
+  }
+}
+
+@include display($LARGE_DESKTOP) {
+  .carousel {
+    height: 200px;
+
+    &__content {
+      width: 80%;
+      position: absolute;
+
+    }
+
+    &__divider {
+      position: absolute;
+      width: 100%;
+
+    }
+  }
+  .carousel__divider.style {
+    height: 130px;
+    top: 40px
+  }
 }

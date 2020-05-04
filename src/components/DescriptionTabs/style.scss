@@ -1,0 +1,103 @@
+@import "../../style/fontFace.css";
+@import "../../style/constants.scss";
+@import "../../constants/displayConstants";
+@import "../../constants/mediaMixin";
+
+
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+
+  &__tab-list {
+    margin: 0 0 10px;
+    padding: 0;
+  }
+
+  &__tab {
+    width: 24%;
+    display: inline-block;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+
+    &--selected {
+      background: #fff;
+      color: black;
+    }
+
+    &--disabled {
+      color: GrayText;
+      cursor: default;
+    }
+  }
+
+  &__tab-panel {
+    margin-top: -5px;
+    background-color: #f8f8f8;
+    display: none;
+
+    &--selected {
+      display: block;
+    }
+  }
+
+  &__description {
+    &-title{
+      font-family: $Lato;
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.22;
+      letter-spacing: normal;
+      text-align: left;
+      color: #8d888e;
+      padding-top: 20px;
+      padding-left: 29px;
+    }
+    &-secondaryTitle{
+      font-family: $Lato;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.19;
+      letter-spacing: normal;
+      text-align: left;
+      color: #8d888e;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__image {
+    &-brilliant {
+      width: 51px;
+      height: 40px;
+    }
+
+    &-girl {
+      width: 42px;
+      height: 40px;
+    }
+
+    &-cash {
+      width: 42px;
+      height: 39px;
+    }
+
+    &-car {
+      width: 75px;
+      height: 35px;
+    }
+
+  }
+}
+
+@include display($TABLE) {
+  .react-tabs {
+    &__tab {
+      padding-left: 10%;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "../../style/fontFace.css";
+@import "../../style/constants.scss";
+@import "../../constants/displayConstants";
+@import "../../constants/mediaMixin";
+
+.contact {
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &__action{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    &-item {
+      font-family: $Lato;
+      font-size: 17.5px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.69;
+      letter-spacing: normal;
+      text-align: left;
+      color: #686369;
+    }
+  }
+  &__phone{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    &-number {
+      font-family: $Lato;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.67;
+      letter-spacing: normal;
+      text-align: left;
+      color: #686369;
+    }
+    &-phone {
+      font-family: $Lato;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.67;
+      letter-spacing: normal;
+      text-align: left;
+      color: #8d888e;
+
+    }
+  }
+}
+
+@include display($TABLE) {
+  .contact {
+    min-width: 400px;
+  }
+}
+
+@include display($DESKTOP) {
+  .header {
+    background: $white
+  }
+}
+
+@include display($LARGE_DESKTOP) {
+  .header {
+    background: $white
+  }
+}
+

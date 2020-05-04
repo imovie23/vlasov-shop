@@ -7,7 +7,7 @@ module.exports = {
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint",
   ],
-  plugins: ["@typescript-eslint", "react","react-hooks", "prettier"],
+  plugins: ["@typescript-eslint", "react", "react-hooks", "prettier"],
   parserOptions: {
     ecmaVersion: 11,
     sourceType: 'module',
@@ -22,6 +22,7 @@ module.exports = {
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/ban-ts-ignore": "off",
     "no-extra-semi": "off",
     "@typescript-eslint/no-extra-semi": ["error"],
     "react/prop-types": "off",
@@ -44,4 +45,4 @@ module.exports = {
       }
     ],
   }
-};
+}
